@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -49,9 +45,22 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
+  height: 2rm;
   padding: 3em;
   text-align: center;
   width: 100%;
+}
+
+.side-menu {
+  
+}
+
+li {
+  list-style-type: none;
+  }
+
+.marketplace {
+  background-color: #5ba4fc;
+  width: 100%;
+  overflow: auto; /* or hidden, visible, scroll depending on your needs */
 }
