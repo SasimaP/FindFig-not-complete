@@ -1,8 +1,7 @@
-import React from 'react';
 
-import ButtonMenu from '../components/icon/ButtonMenu.js';
 import Item from '../components/Item.js';
 import Filter from '../components/Filter.js';
+import ButtonMenu from '../components/icon/ButtonMenu.js';
 
 const list = [1,2,3,4]
 
@@ -16,7 +15,7 @@ function HomePage() {
   return (
     <>
       <div className="HP d-flex flex-row h-100">
-        <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark side-menu" style={{ width: "240px" }}>
+        <div className="side-menu d-flex flex-column flex-shrink-0 p-3" style={{ width: "240px" }}>
           <ul className="nav nav-pills flex-column">
             <li className="nav-item"><ButtonMenu name="Home" /></li>
             <li><ButtonMenu name="Showcase" /></li>
@@ -28,22 +27,22 @@ function HomePage() {
         </div>
         
         <div className="marketplace">
-          <form className="d-flex" role="search">
-            <input className="form-control m-2" type="search" placeholder="find your favorite figure" aria-label="Search" />
-            <button className="btn btn-outline-success m-2" type="submit">Search</button>
+          <form className="d-flex mt-2" role="search">
+            <input className="form-control m-.5" type="search" placeholder="find your favorite figure" aria-label="Search" />
+            <button className="btn btn-primary" type="submit">Search</button>
           </form>
           
-          <div className='banner flex-col w-100 text-center'>
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://pailin.voicetv.co.th/assets/aW1hZ2UvMjAyMS0xMS83NDViYjFiOGVmN2E0Y2QxYTkzNDI3NWI2Y2U3MmY0OS5qcGc=" class="d-block w-50"/>
+          <div className='banner flex-col text-center mx-auto'style={{width: '500px'}} >
+            <div id="carouselExample" class="carousel slide"  >
+              <div class="carousel-inner" >
+                <div class="carousel-item active"  >
+                  <img src="https://pailin.voicetv.co.th/assets/aW1hZ2UvMjAyMS0xMS83NDViYjFiOGVmN2E0Y2QxYTkzNDI3NWI2Y2U3MmY0OS5qcGc=" class="d-block w-100"/>
                 </div>
-                <div class="carousel-item">
-                  <img src="https://thematter.co/wp-content/uploads/2023/02/%E0%B8%AD%E0%B8%B4%E0%B9%88%E0%B8%A1-6.jpg" class="d-block w-50"/>
+                <div class="carousel-item"  >
+                  <img src="https://thematter.co/wp-content/uploads/2023/02/%E0%B8%AD%E0%B8%B4%E0%B9%88%E0%B8%A1-6.jpg" class="d-block w-100"/>
                 </div>
-                <div class="carousel-item">
-                  <img src="https://themomentum.co/wp-content/uploads/2022/01/web-resizee5-4-1024x704.jpg" class="d-block w-50"/>
+                <div class="carousel-item" >
+                  <img src="https://themomentum.co/wp-content/uploads/2022/01/web-resizee5-4-1024x704.jpg" class="d-block w-100"/>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

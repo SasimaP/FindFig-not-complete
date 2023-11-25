@@ -1,51 +1,35 @@
-import Hamburger from './icon/Hamburger.js'
+import CartIcon from './icon/CartIcon.js';
+import Hamburger from './icon/Hamburger.js';
+import UserIcon from './icon/UserIcon.js'
+import { Outlet, Link } from "react-router-dom";
+
 export default function Navbar () {
     return (
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li class="nav-item dropdown">
+                    <button data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-expanded="false" aria-controls="nav-menu">
+                        <Hamburger />
+                    </button>
+                    <ul class="dropdown-menu p-3 text-center" id='nav-menu'>
+                        <li><Link to="/HP" class="dropdown-item">Home</Link></li>
+                        <li><hr class="dropdown-divider"/></li>
+                        <li><a class="dropdown-item" href="#">All Items</a></li>
+                        <li><hr class="dropdown-divider"/></li>
+                        <li><a class="dropdown-item" >My cart</a></li>
+                        <li><hr class="dropdown-divider"/></li>
+                        <li><a class="dropdown-item" href="#">My showcase</a></li>
+                        <li><hr class="dropdown-divider"/></li>
+                        <li><a class="dropdown-item" href="#">Account</a></li>
+                        <li><hr class="dropdown-divider"/></li>
+                        <li><Link to="/" class="dropdown-item "><button class="btn btn-primary">Log out</button></Link></li>
                     </ul>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
+                </li>
+                <div class='d-flex flex-row justify-content-between' style={{width: '4rem'}}>
+                    <UserIcon />
+                    <CartIcon />
                 </div>
             </div>
         </nav>
-        // <div className='navbar'>
-        //     <Hamburger />
-        //     <ul>
-        //         <li>Home</li>
-        //         <li>All items</li>
-        //         <li>My cart</li>
-        //         <li>My showcase</li>
-        //         <li>Account</li>
-        //         <li>Log out</li>
-        //     </ul>
-        //     <div className="logo">LOGOPIC</div>
-        //     <div className="ac">Account</div>
-        //     <div className="carticon">Cart</div>
-        // </div>
-        )   
+    )   
 };

@@ -21,7 +21,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #AEE1FC;
 }
 
 @keyframes App-logo-spin {
@@ -52,7 +52,7 @@
 }
 
 .side-menu {
-  
+  background-color: #5170fd;
 }
 
 li {
@@ -60,7 +60,7 @@ li {
   }
 
 .marketplace {
-  background-color: #5ba4fc;
+  background-color: #AEE1FC;
   width: 100%;
   overflow: auto; /* or hidden, visible, scroll depending on your needs */
 }
