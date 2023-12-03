@@ -64,3 +64,7 @@ li {
   width: 100%;
   overflow: auto; /* or hidden, visible, scroll depending on your needs */
 }
+
+.show-complete {
+  height: 100vh;
+}

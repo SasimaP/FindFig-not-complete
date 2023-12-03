@@ -1,10 +1,13 @@
-
 import Item from '../components/Item.js';
 import Filter from '../components/Filter.js';
 import ButtonMenu from '../components/icon/ButtonMenu.js';
+import SearchIcon from '../components/icon/SearchIcon.js';
+// import { getAllFigure } from '../mongo/mongo.js';
+
+// const db = getAllFigure()
+// console.log(db);
 
 const list = [1,2,3,4]
-
 const filterList = [
   {
   title: "fandom",
@@ -27,11 +30,10 @@ function HomePage() {
         </div>
         
         <div className="marketplace">
-          <form className="d-flex mt-2" role="search">
-            <input className="form-control m-.5" type="search" placeholder="find your favorite figure" aria-label="Search" />
-            <button className="btn btn-primary" type="submit">Search</button>
+          <form className="d-flex my-3" role="search">
+            <input className="form-control m-2" type="search" placeholder="find your favorite figure" aria-label="Search" />
+            <button className="btn btn-primary m-2 " type="submit"><SearchIcon/></button>
           </form>
-          
           <div className='banner flex-col text-center mx-auto'style={{width: '500px'}} >
             <div id="carouselExample" class="carousel slide"  >
               <div class="carousel-inner" >
