@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Layout from './Layout';
 import Signup from "./pages/Signup";
 import OrderComplete from "./pages/OrderComplete";
+import Product from "./components/Products/Products";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="Login" element={<Login />} />
             <Route path="Signup" element={<Signup />} />
             <Route path="Complete" element={<OrderComplete />} />
+            <Route path="/products/:productID" element={<Product />} />
           </Route>
         </Routes>
       </BrowserRouter>  
