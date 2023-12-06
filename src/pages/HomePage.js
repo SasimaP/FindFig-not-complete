@@ -1,20 +1,15 @@
-import Item from '../components/Item.js';
-import Filter from '../components/Filter.js';
-import ButtonMenu from '../components/icon/ButtonMenu.js';
-import SearchIcon from '../components/icon/SearchIcon.js';
-// import { getAllFigure } from '../mongo/mongo.js';
-
-// const db = getAllFigure()
-// console.log(db);
-
-const list = [1,2,3,4]
-const filterList = [
+import React from "react";
+import data_product from "../db/figuredb";
+import Item from '../Item/Item'
+import Filter from "../Filter.js";
+import ButtonMenu from "../Assets/ButtonMenu.js";
+import SearchIcon from "../Assets/SearchIcon.js";
+  const Home = () => {
+  const list = [1,2,3,4]
+  const filterList = [
   {
   title: "fandom",
-  list: ["anime","marvel","game","harry potter"] }
-]
-
-function HomePage() {
+  list: ["anime","marvel","game","harry potter"] }]
   return (
     <>
       <div className="HP d-flex flex-row h-100">
@@ -66,19 +61,20 @@ function HomePage() {
                   return (<Item/>)
                 })}
             </div>  
-            <p class="item w-100 bg-danger mx-auto text-left">All Items</p>
             <div>
-              <div className='all-item d-flex flex-row h-100'>
-                {list.map( () => {
-                  return (<Item/>)
-                })}
-              </div>
+          <h1>All Item</h1>
+          <div className="item-container">
+            {data_product.map((item,i)=>{
+            return <Item key={i} id={item.id} name={item.name} price={item.price} thumb={item.thumb}/>
+            })}
             </div>
+           </div>
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default HomePage;
+
+export default Home;
