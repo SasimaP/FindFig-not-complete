@@ -1,21 +1,23 @@
-import React from 'react';
+import React from "react";
+import './Item.css'
+import { Link } from "react-router-dom";
 
-function Item() {
-  const cardStyle = {
-    width: '15rem'
-  };
+const Item = (props) => {
 
   return (
-    <div className="card mx-4" style={cardStyle}>
-      <img src="https://www.thaiticketmajor.com/variety/img_content/imgeditor/Cubs.png" className="card-img-top" alt="..." />
-      <div className="card-body d-flex flex-column align-items-start">
-        <h5 className="card-title mb-0">Product Name</h5>
-        <p className="card-text text-muted">Price: $19.99</p>
-        <a href="#" className="btn btn-primary w-100 my-1">
-          Add to Cart
-        </a>
-      </div>
+    <div className="item-container">
+      <div className="item">
+       <div className="card" >
+      <Link to={`/products/${props.id}`}>
+        <img className="thumb" src={props.thumb} alt=""></img>
+        <p>{props.name}</p>
+        <div className="item-price">{props.price}</div>
+      </Link>
+      <a href="#" className="btn btn-primary">Add to Cart</a>
+       </div>
     </div>
+    </div>
+    
   );
 }
 
