@@ -1,5 +1,45 @@
+const mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://tsittidet:thereallalune@findfigdb.4gxdoii.mongodb.net/')
+.then(()=>{
+    console.log('mongodb connected');
+})
+.catch(()=>{
+    console.log('error');
+})
 
-const data_product =[{
+//create schema
+const FigureSchema = new mongoose.Schema({
+    id: String,
+    name: String,
+    price: Number,
+    description: String,
+    barcode: Number,
+    category: [String],
+    tags: [String],
+    stock: Number,
+    release_date: String,
+    release_by: String,
+    brand: String,
+    series: String,
+    copyright: [String],
+    manufacturer: String,
+    Specifications: [{
+        scale: String,
+        product_size: String,
+        weight: String,
+        material: String,
+    }],
+    preowned_grade: [{
+        item: String,
+        box: String,
+    }],
+    thumb: String,
+    imgs: [String]
+})
+
+const collection = new mongoose.model('data_product',FigureSchema)
+
+data_product =[{
     id: 1,
     name: 'Elden Ring: Figuarts Mini Raging Wolf',
     price: 1372,
@@ -543,9 +583,7 @@ const data_product =[{
   'https://thumbs-eu-west-1.myalbum.io/photo/1k0/a000baff-87b6-4f9f-a0fb-0c6a01df9e82.jpg',
 'https://thumbs-eu-west-1.myalbum.io/photo/1k0/bba17252-543a-4ada-9819-20203ce451e8.jpg']
 }
-
-
 ]
+collection.insertMany(data_product)
 
-export default data_product;
-
+//insert mock data
