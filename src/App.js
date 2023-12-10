@@ -6,7 +6,7 @@ import Layout from './Layout';
 import Signup from "./pages/Signup";
 import OrderComplete from "./pages/OrderComplete";
 import Product from "./components/Products/Products";
-
+import SellPage from "./Sell/Sell"; //update10/12/66
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
             <Route path="Signup" element={<Signup />} />
             <Route path="Complete" element={<OrderComplete />} />
             <Route path="/products/:productID" element={<Product />} />
+            <Route path="/Sell" element={<SellPage />} />
           </Route>
         </Routes>
       </BrowserRouter>  
