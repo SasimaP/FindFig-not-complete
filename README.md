@@ -8,5 +8,5 @@ Update and create fyi: ➕ceate, 🛠️ edit/update, ———smth sub director
 ———➕SellerRoute.js <br>
 ➕model  👉🏻 mongoDB model<br>
 ———➕SellerModel.js <br>
-🛠️App.js  👉🏻<br>
+🛠️App.js  👉🏻update element <br>
 
