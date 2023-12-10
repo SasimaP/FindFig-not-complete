@@ -10,7 +10,14 @@ Update and create fyi: ➕ceate, 🛠️ edit/update, ———smth sub director
 ———➕SellerModel.js <br>
 🛠️App.js  👉🏻update element <br>
 🟢11/12/66 <br>
-🛠️Sell.js  👉🏻update element <br>
+🛠️Sell.js,ProductDisplay.jsx,App.js  👉🏻update element <br>
 -->component<br>
-———➕Popup.js popup for sell page <br>
+———➕Popup.jsx popup for sell page <br>
 ———➕Popup.css <br>
+->component<br>
+———➕Nav.jsx <br>
+———➕Nav.css <br>
+-->page<br>
+➕Ordercomplete<br>
+———➕Ordercomplete.jsx<br>
+———➕Ordercomplete.css<br>
