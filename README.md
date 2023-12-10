@@ -11,6 +11,6 @@ Update and create fyi: ➕ceate, 🛠️ edit/update, ———smth sub director
 🛠️App.js  👉🏻update element <br>
 🟢11/12/66 <br>
 🛠️Sell.js  👉🏻update element <br>
--->component
-———➕Popup.js popup for sell page
-———➕Popup.css
+-->component<be>
+———➕Popup.js popup for sell page <br>
+———➕Popup.css <br>
