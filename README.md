@@ -2,7 +2,7 @@ Update and create fyi: ➕ceate, 🛠️ edit/update, ———smth sub director
 🟢10/12/66 <br>
 ➕Server.js  👉🏻set up Node/Express server. <br>
 ➕Sell 👉🏻 Sell request pages for seller<br> 
-———➕Sell.jsx <br> ps. no add/remove item , waiting: pop up
+———➕Sell.jsx ps. no add/remove item , waiting: pop up<br> 
 ———➕Sell.css  <br>
 ➕routes 👉🏻 passing data  <br>
 ———➕SellerRoute.js <br>
