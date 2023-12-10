@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect,useState } from "react";
 import "./ProductDisplay.css";
+import Nav from "../Navigation/Nav";
+
 
 const ProductDisplay = (props) => {
     //fetch data
@@ -25,7 +27,17 @@ const ProductDisplay = (props) => {
     }
    
   return (
+    
     <body className='mainbody'>
+      <header>
+      <Nav topic="Product" 
+            back="https://cdn.discordapp.com/attachments/787359617280770051/1183513820220629092/3.png?ex=65889c23&is=65762723&hm=b608f4b0dafa79e069345c1fd46fb2256b13299db710a859f027b85295bcbe44&"
+            account="https://cdn.discordapp.com/attachments/787359617280770051/1183513819427913778/1.png?ex=65889c23&is=65762723&hm=285dc6cb6f325e96a63deb650d157bb45a6fddce1731e5766d15215239f0685b&"
+            cart="https://cdn.discordapp.com/attachments/787359617280770051/1183513819981549639/2.png?ex=65889c23&is=65762723&hm=db11b00f36b56189d04437dad86744125c2456a9d7e4b7e95cc617f33e2e8efb&"
+            >
+            
+            </Nav>
+      </header>
         <div className='layoutmain'>
           <div className="myItem">
             <div className="productdisplay">
@@ -65,16 +77,11 @@ const ProductDisplay = (props) => {
                 {/* Quantity controls */}
               <div className="buy">
                 <p className="instock">In stock: {product.stock}</p>
-                <div className="btn">
+                <div className="select-quantity-container">
                   <button className="btn-rm" onClick={handleRemoveQuantity}>-</button>
-                  <input
-                    type="number"
-                    className="quantity"
-                    value={quantity}
-                    min={1}
-                    max={product.stock}
-                    onChange={(e) => setQuantity(Number(e.target.value))}
-                  />
+                  <div className="quantity-container">
+                    <p className="quantity">{quantity}</p>
+                  </div>
                   <button className="btn-add" onClick={handleAddQuantity}>+
                   </button>
                 </div>
@@ -86,11 +93,14 @@ const ProductDisplay = (props) => {
             </div>
             {/* other detail */}
             <section>
-              
-              <div className="tab">
-                
-                <button className="tablinks" onClick={(event) => openTab(event, 'about')}><span>ABOUT THIS ITEM</span></button>
-                <button className="tablinks" onClick={(event) => openTab(event, 'grading')}><span>GRADING SCALE</span></button>
+              <div class="tabs__line">
+                <div class="tabs__indicator" id="selectedIndicator"></div>
+              </div>
+              <div className="tab" id="tab-container">
+                <div className="tabs-titles">
+                  <button className="tablinks button-48" onClick={(event) => openTab(event, 'about')}><span>ABOUT THIS ITEM</span></button>
+                  <button className="tablinks button-48" onClick={(event) => openTab(event, 'grading')}><span>GRADING SCALE</span></button>
+                </div> 
               </div>
               
               <div className="tabcontent" id="about">
@@ -156,7 +166,7 @@ const ProductDisplay = (props) => {
                     <div><strong>C:</strong> Fairly worn. May have fairly severe scratches/paint loss.</div>
                     <div className="grade-div"></div>
                     <h3>Box Grading</h3>
-                    <div><strong>S:</strong> Never opened and still manufacturer sealed. Like new.</div>
+                    <div><strong>S:</strong> Like new. Never opened and still manufacturer sealed.</div>
                     <div><strong>A:</strong> May have very minor wear.</div>
                     <div><strong>B:</strong> May have lightly worn corners, and/or dents.</div>
                     <div><strong>C:</strong> May have fairly worn corners, dents, and/or tears.</div>
