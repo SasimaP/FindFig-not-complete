@@ -1,14 +1,14 @@
 Update and Add <br>
-10/12/66 
-———src
-    ➕Server.js
-    ———pages
-        ➕Sell
-          ———Sell.jsx
-          ———Sell.css  
-    ➕routes
-      ———SellerRoute.js
-    ➕model
-      ———SellerModel.js
-    🛠️App.js
+10/12/66 <br>
+———src <br>
+    ➕Server.js <br>
+    ———pages <br>
+        ➕Sell <br>
+          ———Sell.jsx <br>
+          ———Sell.css  <br>
+    ➕routes <br>
+      ———SellerRoute.js <br>
+    ➕model <br>
+      ———SellerModel.js <br>
+    🛠️App.js <br>
 
