@@ -45,13 +45,14 @@ function SellPage(){
        axios.post('http://localhost:5000/Sell',newRequire)
        .then(response => {
         console.log(response);
+        setButtonPopup(true);
         window.location.reload();
     })
     .catch(error => {
 
         console.error(error);
     });
-    setButtonPopup(true);
+   
     }
 
 
