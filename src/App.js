@@ -20,6 +20,7 @@ function App() {
             <Route path="Complete" element={<OrderComplete />} />
             <Route path="/products/:productID" element={<Product />} />
             <Route path="/Sell" element={<SellPage />} />
+            <Route path="/Ordercomplete" element={<OrderComplete />} />
           </Route>
         </Routes>
       </BrowserRouter>  
