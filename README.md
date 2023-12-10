@@ -9,4 +9,8 @@ Update and create fyi: ➕ceate, 🛠️ edit/update, ———smth sub director
 ➕model  👉🏻 mongoDB model<br>
 ———➕SellerModel.js <br>
 🛠️App.js  👉🏻update element <br>
-
+🟢11/12/66 <br>
+🛠️Sell.js  👉🏻update element <br>
+-->component
+———➕Popup.js popup for sell page
+———➕Popup.css
