@@ -3,9 +3,10 @@ import axios from "axios";
 import { useEffect,useState } from "react";
 import "./Sell.css";
 import Nav from "../Navigation/Nav";
+import Popup from "../components/Popup";
 
 function SellPage(){
-
+    const [buttonPopup, setButtonPopup] = useState(false);
     const [input, setInput] = useState({
         fname: '',
         lname: '',
@@ -25,6 +26,7 @@ function SellPage(){
                 [name]: value
             }
         })
+
     }
     
     function handleClick(event) {
@@ -49,8 +51,10 @@ function SellPage(){
 
         console.error(error);
     });
+    setButtonPopup(true);
     }
-    
+
+
 
     return(
         <div id="wrapper">
@@ -190,6 +194,7 @@ function SellPage(){
                         </div>
                     </div>
                 </div>
+                <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
             </main>
         </div>
     );
