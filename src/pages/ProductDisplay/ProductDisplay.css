@@ -1,15 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+* {
+    font-family: 'Open Sans', sans-serif !important;
+}
   div{
     display: block;
   }
-  .layoutmain{
-    margin: 3em 10em ;
-  }
-  
+
+#main-product, #wrapper{
+    position: relative;
+}
+#main-product{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+  @media screen and (min-width: 480px) {
+    .col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
   .productdisplay{
     display: flex;
-    flex-direction: row;
-    max-width: 80rem;
+    flex-flow: row wrap;
+    width: 80%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   .productdisplay-left{
     display: flex;
@@ -82,6 +102,21 @@
     padding-top: 1em;
     line-height: 30px;
   }
+  .tag-cate{
+    border-bottom: 2px solid#ddd;
+    border-top: 2px solid#ddd;
+    padding: 1em 0em 1em;
+    margin: 1em 0em 1em;
+  }
+  .tag-cate a, .tag-cate p{
+    color: #8b8a8a;
+    display: block;
+    padding: 5px 0;
+  
+  }
+  .tag-cate span{
+    color: #5ba4fc;
+  }
   .text1{
     line-height: 25px;
     color: grey;
@@ -107,30 +142,24 @@
     transform: scale(1.05);
     transition: all 0.5s ease;
   }
-  
-  .btn{
-    padding-top: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    
-  }
-.btn-add{
-    border-style: none;
-    width: 3em;
-    height: 3em;
-    justify-content: center;
-    align-items: center;
+  .btn-add{
     background: #5ba4fc;
-    color: #fff;
+    color: #e6e6ff;
   }
   .btn-rm{
-    border-style: none;
-    width: 3em;
-    height: 3em;
-    justify-content: center;
-    align-items: center;
     background: #b8b8b8;
     color: #000000;
+  }
+  button.btn-rm,
+  button.btn-add {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
   }
   .btn-add:hover{
     background: #a6ceff;
@@ -142,54 +171,72 @@
     color: #000000;
     cursor: pointer;
   }
-
-  input.quantity{
-    border: 1px solid #b8b8b8;
-    text-align: center; 
+  .select-quantity-container {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .quantity::-webkit-outer-spin-button,.quantity::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-  } 
+
+p.quantity {
+  border: 1px solid #b8b8b8;
+  width: 3rem;
+  height: 3rem;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
   aside{
     width: 40%;
     padding-left: 50px;
   }
+
+/*Full detail of items*/
   section{
     margin-top: 2em;
-    border-top: 2px solid #b8b8b8;
-  }
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
 
-  .tab button{
-    width: 300px;
-    height: 40px;
-    font-size: 17px;
-    letter-spacing: 1px;
-    text-align: center;
-    position: relative;
-    background-color: #a6ceff;
-    border-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
   }
+/*tab*/
+.tabs-titles {
+  display: flex;
+}
+
+.tablinks {
+  /* Reset */
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+  padding: 0 1rem;
+  height: 2rem;
+}
+
+.tabs__line {
+  background: #d1d5db;
+  height: 2px;
+  width: 100%;
+  position: relative;
+}
+
+.tabs__indicator {
+  background: #3b82f6;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition-duration: 200ms;
+  transition-property: transform, width;
+}
+
   
   .tabcontent{
     display: none;
     padding: 5px 0px 10px;
   }
-  .tag-cate{
-    border-bottom: 2px solid#ddd;
-    border-top: 2px solid#ddd;
-    padding: 1em 0em 1em;
-    margin: 1em 0em 1em;
-  }
-  .tag-cate a, .tag-cate p{
-    color: #8b8a8a;
-    display: block;
-    padding: 5px 0;
-  
-  }
-  .tag-cate span{
-    color: #5ba4fc;
-  }
-  
+/*table data about detail*/
   .table>tbody>tr>td{
     padding: 8px;
     line-height: 1.42857143;
@@ -231,11 +278,11 @@
     vertical-align: inherit;
     color: #333333;
   }
-li {
+  li {
     display: list-item;
     text-align: -webkit-match-parent;
-}
-  
+  }
+  /*grading tab*/
   h3 {
     display: block;
     font-size: 1.17em;
@@ -251,3 +298,4 @@ li {
     margin-top: 2em;
     border-top: 1px solid #ddd;
   }
+ 
