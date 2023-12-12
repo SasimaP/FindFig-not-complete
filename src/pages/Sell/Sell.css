@@ -8,14 +8,14 @@
     position: relative;
 }
 #main{
-    max-width: 940px;
+    max-width: 1020px;
     margin: 0 auto;
 }
 .page-wrapper{
     padding-bottom: 30px;
     padding-top: 20px;
 }
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 480px) {
     .col {
         flex-basis: 100%;
         max-width: 100%;
@@ -102,7 +102,7 @@ h5 {
     border: 1px solid#ddd;
     padding: 15px;
     max-width: 500px;
-    width: 450px;
+    width: 500px;
 }
 
 .input-address{
@@ -149,10 +149,10 @@ h5 {
   margin-top: 20px;
 }
 .input-box-inner input, .input-box-inner select{
-    width: 300px;
+    width: 330px;
 }
 .large-box input{
-    max-width: 940px;
+    max-width: 1020px;
     width: 100%;
     margin-bottom: 15px;
 }
