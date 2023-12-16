@@ -2,8 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useEffect,useState } from "react";
 import "./Sell.css";
-import Nav from "../../components/Nav/Nav";
-import Popup from "../../components/Popup";
+import Nav from "../Navigation/Nav";
+import Popup from "../components/Popup";
 
 function SellPage(){
     const [buttonPopup, setButtonPopup] = useState(false);
