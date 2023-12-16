@@ -4,7 +4,7 @@ import Item from '../components/Item.js'
 import Filter from "../components/Filter.js";
 import ButtonMenu from "../components/icon/ButtonMenu.js";
 import SearchIcon from "../components/icon/SearchIcon.js";
-import { ShopContext } from "../components/ShopContext.js"
+import { ShopContext } from "../components/ShopContext/ShopContext.jsx"
 const filterList = [
   {
     title: "Series",
