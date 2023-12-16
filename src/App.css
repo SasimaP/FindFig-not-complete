@@ -60,9 +60,9 @@ li {
   }
 
 .marketplace {
-  background-color: #AEE1FC;
+  background-color: #ffffff;
   width: 100%;
-  overflow: auto; /* or hidden, visible, scroll depending on your needs */
+  overflow: hidden
 }
 
 .show-complete {

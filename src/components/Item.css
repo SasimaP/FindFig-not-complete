@@ -1,19 +1,30 @@
-.item-container{
-    display: flex;
-    flex-direction: row;
-    max-width: 10em;
-}
+
 .item{
     display: flex;
 }
 .card{
-    max-width: 10em;
+    max-width: 10.5em;
+    width: 110em;
+    padding: 5px;
 }
 .item:hover{
     transform: scale(1.01);
     transition: all 0.5s ease;
-    transition: 0.6;
 }
 .thumb{
-    max-width: 10rem;
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+
+.itemName {
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2;
+   -webkit-box-orient: vertical;
+   height: 3em;
 }
