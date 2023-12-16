@@ -5,8 +5,8 @@ import Login from "./pages/Login";
 import Layout from './Layout';
 import Signup from "./pages/Signup";
 import OrderComplete from "./pages/OrderComplete";
-import Product from "./components/Products/Products";
-import SellPage from "./Sell/Sell"; //update10/12/66
+import Product from "./components/Products/Product";
+import SellPage from "./pages/Sell/Sell"; //update10/12/66
 
 function App() {
   return (
