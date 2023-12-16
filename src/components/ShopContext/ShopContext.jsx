@@ -1,5 +1,5 @@
 import React, {createContext} from "react";
-import data_product from "../db/figuredb";
+import data_product from '../../db/figuredb';
 
 export const ShopContext = createContext(null);
 
