@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect,useState } from "react";
 import "./ProductDisplay.css";
-import Nav from "../Navigation/Nav";
+import Nav from "../../components/Nav/Nav";
 
 
 const ProductDisplay = (props) => {
